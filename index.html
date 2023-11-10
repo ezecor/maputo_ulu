@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urban land use in Maputo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--tag(s) para abrir web app in full-screen mode (without address bar)-->
+    <meta name="mobile-web-app-capable" content="yes"> <!--Android-->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!--Apple-->
+    <!-- Estilos-->    
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/leaflet.groupedlayercontrol.min.css">
+    <!-- Javascript-->    
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.groupedlayercontrol.min.js"></script>
+    <srcript src="js/leaflet-polygon.fillPattern-canvas.js"></srcript>
+    <script src="js/leaflet.pattern.js"></script>    
+    <!-- Dados -->
+    <script src="data/ulu_1964_wgs84.json"></script>
+    <script src="data/ulu_1973_wgs84.json"></script>
+    <script src="data/ulu_1982_wgs84.json"></script>    
+    <script src="data/ulu_1991_wgs84.json"></script>
+    <script src="data/ulu_2001_wgs84.json"></script>    
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        #map{
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }        
+/*
+        #titulo {
+            position: fixed;
+            margin-top: 0;
+            top: 10px;
+            left: 55px;
+            font-size: 2em;
+            font-family: "Roboto", sans-serif;
+            letter-spacing: .04em;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid grey;
+            border-radius: 3px;
+            z-index: 800;
+        } */
+        .legenda {
+            padding: 6px 8px;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .legenda div {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        div.legenda.leaflet-control br {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <!--<div id="titulo">Urban land use in Maputo</div>-->
+    <script src="js/layerstematicos.js"></script>
+    
+</body>
+</html>
+
