@@ -79,25 +79,21 @@ function atributos(feature, layer) {
       layer.bindTooltip(feature.properties.N_I_D_EN);
 }
 //Simbologia dos layers temáticos
-function ulu_style(feature) {
-  //L.polygon(feature, {fill:"url(./img/s24.png)"}).addTo(map);
-  
+function ulu_style(feature, layer) { //não sei se é layer, feature
   var classe = feature.properties.N_I_C;
   if (classe == "1.0") {
     return {
-      fill: "url(./img/s101.png)",
+      fill: 'url(./img/s101.png)',
       weight: 0.0,
       opacity: 1,
       fillOpacity: 0.8
     };
   } else if (classe == "2.4") {
       return {
-        
-          //fill: "url(./img/s24.png)",
-        //fillColor: "black",
+        fill: 'url(./img/g519w.png)',
         weight: 0.0,
         opacity: 1,
-        fillOpacity: 0.8      
+        fillOpacity: 1
       };
   } else {
       return {
@@ -110,7 +106,7 @@ function ulu_style(feature) {
 }
 
 function ulu_color(d) {
-    //if(d == 1.0) return "./img/symb1_1.gif";
+    //if(d == 1.0) return "./img/s101.png";
     if(d == "2.1") return "#cc0000";
     if(d == "2.2") return "#e63b00";
     if(d == "2.3") return "#ff9600";
@@ -120,7 +116,7 @@ function ulu_color(d) {
     if(d == "5.0") return "#d7c29e";
     if(d == "6.0") return "#7cb8bf";
     if(d == "7.0") return "#737300";
-    return "#d73027";  
+    //return "#d73027";  
 }
 
 var leg_UsoSolo = L.control({position: "bottomright"});
